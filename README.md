@@ -1,3 +1,3 @@
-# bootstrap-setup
+# After Clone
 
-command
+Use commend "npm i"
