@@ -1,0 +1,142 @@
+.small-label {
+  font-size: $bodyXS;
+  text-transform: uppercase;
+  letter-spacing: 0.36px;
+}
+.theme-content{
+  font-size: $bodyL;
+  line-height: 30px;
+}
+.heading-content {
+  font-size: $headingXS;
+  line-height: 32px;
+  @include media-breakpoint-down(md) {
+    font-size: $bodyM;
+  }
+}
+// .theme-content {
+//   font-size: $headingXS;
+// }
+.text-xs {
+  font-size: $bodyXS;
+}
+.text-sm {
+  font-size: $bodyS;
+}
+.text-base {
+  font-size: $bodyM;
+}
+.text-lg {
+  font-size: $bodyL;
+}
+
+.text-title {
+  font-size: 34px;
+  letter-spacing: -0.34px;
+  @include media-breakpoint-up(lg) {
+    font-size: 48px;
+    letter-spacing: -0.48px;
+  }
+}
+
+.title-sm{
+  font-size: 28px;
+  letter-spacing: -0.28px;
+}
+
+.title-md{
+  font-size: 30px;
+  letter-spacing: -0.3px;
+}
+
+.font-light {
+  font-weight: 300;
+}
+.font-normal {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
+}
+
+.text-gray {
+  color: $gray;
+}
+.text-light-gray {
+  color: $light-gray;
+}
+
+.tracking-wide {
+  letter-spacing: 0.1em;
+}
+.bg-gray {
+  background-color: $gray;
+}
+
+.bg-light-gray {
+  background-color: #f4f4f4;
+}
+
+.border-gray-top {
+  border-top: 1px solid rgba(112, 112, 112, 0.5);
+}
+.border-gray-bottom {
+  border-bottom: 1px solid rgba(112, 112, 112, 0.5);
+}
+
+.bg-green {
+  background-color: $green;
+}
+.text-green {
+  color: $green;
+}
+.bg-dark-gray{
+  background-color: $dark-gray;
+}
+.transition {
+  transition: 0.4s all ease-in-out;
+}
+
+.bg-primary-hover {
+  background-color: $primary;
+
+  &:hover {
+    background-color: $secondary;
+  }
+}
+
+.bg-gray-mobile{
+  @include media-breakpoint-down(md){
+    background-color: $gray !important;
+  }
+}
+
+.bg-white-mobile{
+  @include media-breakpoint-down(md){
+    background-color: $white !important;
+  }
+}
+
+.bg-light-gray{
+  background-color: $light-gray;
+}
+
+.text-light-gray{
+  color: $light-gray !important;
+}
+
+.z-index {
+  z-index: 9;
+}
+.leading-relax {
+  line-height: 2;
+}
+.cursor-pointer {
+  cursor: pointer;
+}

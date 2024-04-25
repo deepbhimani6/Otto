@@ -1,0 +1,52 @@
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  appearance: none !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+.btn {
+  padding: 20px 46px;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 10px;
+  @include generate-transition(all, 500ms, ease);
+  @include media-breakpoint-down(md) {
+    font-size: $bodyM;
+  }
+  &.icon-end{
+    .icon{
+      margin-left: 12px;
+    }
+  }
+  &.icon-start{
+    .icon{
+      margin-right: 12px;
+    }
+  }
+  &.btn-text{
+      font-size: $buttonSize;
+  }
+}
+
+.btn-primary {
+  &:hover {
+    background-color: $secondary;
+    border-color: $secondary;
+  }
+}
+
+.btn-secondary {
+  &:hover {
+    background-color: $primary;
+    border-color: $primary;
+    color: $secondary;
+  }
+}
+
+.btn-x-large{
+  width: 100%;
+  max-width: 282px;
+}

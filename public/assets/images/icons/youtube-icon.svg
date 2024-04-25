@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" width="30" height="20">
+	<title>youtube-icon-svg</title>
+	<defs>
+		<image  width="8" height="10" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAKCAMAAAC+Ge+yAAAAAXNSR0IB2cksfwAAADNQTFRFIxNVIBBYAAAAIxNWIxNWIhJVIxNVJRVVIhJWIBBQIxNWJBRYIxNXIxNWIxNXJBJWIhJX7mirhgAAABF0Uk5TsCAA/+9vvzB/EN9A4FCQ0HDR/m+UAAAANklEQVR4nC3MSxIAIAgCUIvK7H//0zajsHoLQCRlj6BUAmhKAN0IjEmIOdaOzjEvX435i7/8ATETATRD5Y3AAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		.s0 { fill: #ffffff } 
+	</style>
+	<path id="Rectangle_527" class="s0" d="m0 6c0-3.3 2.7-6 6-6h17.3c3.3 0 6 2.7 6 6v7.5c0 3.4-2.7 6-6 6h-17.3c-3.3 0-6-2.6-6-6z"/>
+	<use id="Layer 1" href="#img1" x="11" y="5"/>
+</svg>

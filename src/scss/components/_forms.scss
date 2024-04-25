@@ -1,0 +1,186 @@
+// Checkbox Control
+.checkbox-control{
+    .theme-checkbox {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        border: 1px solid $secondary;
+        background: $white;
+        position: relative;
+
+        &::before{
+            content:"";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 3px;
+            background: url(../images/icons/checkbox-check-icon.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 10px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+            opacity: 0;
+            transform: scale(0);
+            transition: 0.2s all ease-in-out;
+        }
+    }
+
+    input{
+        position: absolute;
+        z-index: 9;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        opacity: 0;
+
+        &:checked + .theme-checkbox{
+            background-color: $secondary;
+            &:before {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
+
+}
+
+// Radio Control
+.radio-control{
+    .theme-radio {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background: $white;
+        position: relative;
+        @include media-breakpoint-down(md){
+            width: 30px;
+            height: 30px;
+        }
+        &::before{
+            content:"";
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            background: $black;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            z-index: 1;
+            opacity: 0;
+            transform: scale(0);
+            transition: 0.2s all ease-in-out;
+            @include media-breakpoint-down(md){
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    input{
+        display: none;
+
+        &:checked + .theme-radio:before {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+// Select2
+.select2-container{
+    width: 100% !important;
+
+   &.select2-container--open{
+       z-index: 99;
+       .select2-selection{
+           .select2-selection__arrow{
+               transform: rotate(-180deg);
+           }
+       }
+   }
+   .select2-results__options{
+       .select2-results__option{
+           &.select2-results__option--selected{
+               background-color: $primary;
+               color: $white;
+               font-size: 16px;
+           }
+           &.select2-results__option--highlighted{
+               background-color: $primary;
+               color: $white;
+               font-size: 16px;
+           }
+       }
+   }
+}
+
+.show ~ .select2-container{
+   &.select2-container--open{
+       z-index: 9999;
+   }
+}
+
+.select2-dropdown{
+   border-radius: 0px !important;
+   border: 0;
+   overflow: hidden;
+   box-shadow: 0px 3px 6px #0000000F;
+}
+.select2-results__option{
+   padding: 14px 26px;
+   font-size: 16px;
+}
+
+// Form CSS
+.form-group{
+  .form-control{
+    padding: 13px 20px;
+    background-color: rgba($color: $white, $alpha: 0.12);
+    border-radius: 5px;
+    font-size: $bodyM;
+    font-weight: 300;
+    border: 0;
+    outline: none;
+    &::placeholder{
+      color: $white;
+    }
+    &:focus{
+      border: 0;
+      background-color: rgba($color: $white, $alpha: 0.30);
+    }
+  }
+  input{
+    &[type="date"]{
+      -webkit-appearance: none;
+    }
+  }
+  .select2{
+    &.select2-container{
+      .select2-selection{
+        background-color: rgba($color: $white, $alpha: 0.12);
+        border-radius: 5px;
+        height: auto;
+        border: 0;
+        .select2-selection__rendered{
+          padding: 15px 20px;
+          color: $white;
+        }
+        .select2-selection__arrow{
+              height: 100%;
+              top: 0px;
+              right: 25px;
+              width: 10px;
+              @include generate-transition(all, 500ms, ease);
+          b{
+            border-width: 5px 5px 0 5px;
+            border-color: $white transparent transparent transparent;
+          }
+        }
+      }
+    }
+  }
+}
